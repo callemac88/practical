@@ -1,36 +1,24 @@
 const h1 = document.querySelector('h1');
-const p = document.querySelector('p');
-const parrafito = document.getElementsByClassName('parrafito');
-const pid = document.getElementById('pid');
-const input = document.querySelector('input');
+const form = document.querySelector('#form');
+const input1 = document.querySelector('#calculo1');
+const input2 = document.querySelector('#calculo2');
+const btn = document.querySelector('#btnCalcular');
+const pResult = document.querySelector('#result');
 
-console.log(input.value)
+// form.addEventListener('submit', sumarInputValues);
 
-console.log({
-  h1,
-  p,
-  parrafito,
-  pid,
-  input,
-});
+// function sumarInputValues(event) {
+//   console.log({event});
+//   event.preventDefault();
+//   const suma = Number(input1.value) + Number(input2.value);
+//   pResult.innerHTML = "Resultado: " + suma;
+// }
 
-h1.innerHTML= 'Patito <br /> Feo';
+btn.addEventListener('click', sumarInputValues);
 
-// console.log(h1.getAttribute('class'));
-// h1.setAttribute('class', 'rojo');
-
-h1.classList.add('rojo');
-h1.classList.remove('verde');
-// h1.classList.toggle('verde');
-// h1.classList.conteains('verde');
-
-input.value = "456";
-
-const img = document.createElement('img');
-
-img.setAttribute('src', 'https://st2.depositphotos.com/1013220/6981/i/950/depositphotos_69812475-stock-photo-african-sunset-with-tree-in.jpg')
-
-console.log(img);
-
-pid.innerHTML = "";
-pid.appendChild(img);
+function sumarInputValues(event) {
+  // console.log({event});
+  // event.preventDefault();
+  const suma = Number(input1.value) + Number(input2.value);
+  pResult.innerHTML = "Resultado: " + suma;
+}
